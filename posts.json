@@ -1,0 +1,35 @@
+[
+    {
+       "id": 1,
+       "title": "Bitcoin ve Geleceği",
+       "imageUrl": "public/img/background/content-1.jpg",
+       "content": "Bitcoin, son on yılın en popüler dijital para birimlerinden biri haline geldi. Merkeziyetsiz yapısı ve sınırlı arzı sayesinde değer kazanmıştır. Ancak, volatilitesi yatırımcıları düşündürmektedir.",
+       "author": "Alp Kara",
+       "date": "04.01.2024"
+    },
+    {
+       "id": 2,
+       "title": "Ethereum: Akıllı Sözleşmelerin Gücü",
+       "imageUrl": "public/img/background/content-2.jpg",
+       "content": "Ethereum, blockchain teknolojisi üzerine inşa edilen ve akıllı sözleşmeleri destekleyen bir platformdur. Geliştiricilere merkeziyetsiz uygulamalar oluşturma imkanı tanır.",
+       "author": "Alp Kara",
+       "date": "04.01.2024"
+    },
+    {
+       "id": 3,
+       "title": "Altcoinler ve Yatırım Fırsatları",
+       "imageUrl": "public/img/background/content-3.jpg",
+       "content": "Bitcoin'in başarısının ardından, birçok alternatif kripto para birimi ortaya çıkmıştır. Bu altcoinler, farklı özellikleri ve kullanım alanları ile yatırımcılara çeşitli fırsatlar sunar.",
+       "author": "Alp Kara",
+       "date": "04.01.2024"
+    },
+    {
+       "id": 4,
+       "title": "Blockchain Teknolojisinin Geleceği",
+       "imageUrl": "public/img/background/content-4.jpg",
+       "content": "Blockchain, sadece kripto para birimlerinin değil, aynı zamanda çeşitli sektörlerin de geleceğini şekillendiren devrim niteliğinde bir teknolojidir. Sağlık, finans ve daha birçok alanda kullanılma potansiyeline sahiptir.",
+       "author": "Alp Kara",
+       "date": "04.01.2024"
+    }
+ ]
+ 

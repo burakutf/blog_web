@@ -10,29 +10,25 @@
 </head>
 
 <body>
-
     <div class="container" id="container">
         <div class="form-container sign-up">
-            <form>
+            <form id="registerForm">
                 <h1>Hesap Oluştur</h1>
-    
                 <span>veya emailini kullanarak kayıt ol</span>
-                <input type="text" placeholder="Ad">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Şifre">
-                <input type="number" placeholder="Yaş" min="10">
-
-                <button>Kayıt ol</button>
+                <input type="text" id="regName" placeholder="Ad" required>
+                <input type="email" id="regEmail" placeholder="Email" required>
+                <input type="password" id="regPassword" placeholder="Şifre" required>
+                <input type="number" id="regAge" placeholder="Yaş" min="10" required>
+                <button type="submit">Kayıt ol</button>
             </form>
         </div>
         <div class="form-container sign-in">
-            <form>
+            <form id="loginForm">
                 <h1>Giriş Yap</h1>
-        
                 <span>veya emailini kullanarak kayıt ol</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Şifre">
-                <button>Giriş yap</button>
+                <input type="email" id="loginEmail" placeholder="Email" required>
+                <input type="password" id="loginPassword" placeholder="Şifre" required>
+                <button type="submit">Giriş yap</button>
             </form>
         </div>
         <div class="toggle-container">
@@ -44,14 +40,12 @@
                 </div>
                 <div class="toggle-panel toggle-right">
                     <h1>Merhaba 👋</h1>
-                    <p>Tüm site özelliklerini kullanmak için kişisel bilgilerinizle kaydolun.
-                    </p>
-                    <button class="hidden" id="register">Kayıt  Ol</button>
+                    <p>Tüm site özelliklerini kullanmak için kişisel bilgilerinizle kaydolun.</p>
+                    <button class="hidden" id="register">Kayıt Ol</button>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
