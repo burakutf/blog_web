@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,14 +9,13 @@
       crossorigin="anonymous" referrerpolicy="no-referrer" />
    <title>Kripto Borsa</title>
 </head>
-
 <body>
    <div class="topbar">
       <div class="wrapper target">
          <div class="center">
             <a href="index.html">Ana Sayfa</a>
             <a href="pages/about.html">Yatırım & Borsa</a>
-            <a href="pages/register.html">Coin</a>
+            <a href="pages/coin.html">Coin</a>
             <a href="pages/kids.html">Çocuk</a>
             <a href="pages/login.html">Giriş Yap</a>
          </div>
@@ -41,8 +39,58 @@
 
    <div class="home">
       <div class="wrapper">
-         <div class="posts" id="posts">
-            <!-- Postlar burada dinamik olarak eklenecek -->
+         <div class="posts">
+            <div class="post target" onclick="showPostDetails(1)">
+               <h1>Bitcoin ve Geleceği</h1>
+               <img src="public/img/background/content-1.jpg" alt="content">
+               <p>
+                  Bitcoin, son on yılın en popüler dijital para birimlerinden biri haline geldi. Merkeziyetsiz yapısı ve
+                  sınırlı arzı sayesinde değer kazanmıştır. Ancak, volatilitesi yatırımcıları düşündürmektedir.
+               </p>
+               <div class="authorAndDate">
+                  <span>Alp Kara</span>
+                  <span>04.01.2024</span>
+               </div>
+            </div>
+
+            <div class="post target" onclick="showPostDetails(2)">
+               <h1>Ethereum: Akıllı Sözleşmelerin Gücü</h1>
+               <img src="public/img/background/content-2.jpg" alt="content">
+               <p>
+                  Ethereum, blockchain teknolojisi üzerine inşa edilen ve akıllı sözleşmeleri destekleyen bir platformdur.
+                  Geliştiricilere merkeziyetsiz uygulamalar oluşturma imkanı tanır.
+               </p>
+               <div class="authorAndDate">
+                  <span>Alp Kara</span>
+                  <span>04.01.2024</span>
+               </div>
+            </div>
+
+            <div class="post target" onclick="showPostDetails(3)">
+               <h1>Altcoinler ve Yatırım Fırsatları</h1>
+               <img src="public/img/background/content-3.jpg" alt="content">
+               <p>
+                  Bitcoin'in başarısının ardından, birçok alternatif kripto para birimi ortaya çıkmıştır. Bu altcoinler,
+                  farklı özellikleri ve kullanım alanları ile yatırımcılara çeşitli fırsatlar sunar.
+               </p>
+               <div class="authorAndDate">
+                  <span>Alp Kara</span>
+                  <span>04.01.2024</span>
+               </div>
+            </div>
+
+            <div class="post target" onclick="showPostDetails(4)">
+               <h1>Blockchain Teknolojisinin Geleceği</h1>
+               <img src="public/img/background/content-4.jpg" alt="content">
+               <p>
+                  Blockchain, sadece kripto para birimlerinin değil, aynı zamanda çeşitli sektörlerin de geleceğini şekillendiren
+                  devrim niteliğinde bir teknolojidir. Sağlık, finans ve daha birçok alanda kullanılma potansiyeline sahiptir.
+               </p>
+               <div class="authorAndDate">
+                  <span>Alp Kara</span>
+                  <span>04.01.2024</span>
+               </div>
+            </div>
          </div>
 
          <div class="sidebar">
@@ -63,10 +111,9 @@
             </div>
 
             <div class="area target">
-               <h3>Your Space</h3>
-               <a href="/admin/add">Add Post</a>
-               <a href="#">Your Performance</a>
-               <a href="#">Number of Views</a>
+               <h3>Sana Ayrılmış</h3>
+               <a href="#">Senin İsteklerin</a>
+               <a href="#">Senin Arzuların</a>
             </div>
          </div>
       </div>
@@ -84,31 +131,53 @@
             document.getElementById('userAge').textContent = user.age;
             document.getElementById('userProfilePic').src = 'public/img/user/user-2.jpg'; // Customize as needed
          }
-
-         // JSON dosyasından blog yazılarını getir
-         fetch('posts.json')
-            .then(response => response.json())
-            .then(posts => {
-               const postsContainer = document.getElementById('posts');
-               posts.forEach(post => {
-                  const postElement = document.createElement('div');
-                  postElement.className = 'post target';
-                  const truncatedContent = post.content.length > 255 ? post.content.substring(0, 255) + '...' : post.content;
-                  postElement.innerHTML = `
-                     <h1>${post.title}</h1>
-                     <img src="${post.imageUrl}" alt="content">
-                     <p>${truncatedContent}</p>
-                     <a href="pages/detail.html?id=${post.id}">Devamını Oku</a>
-                     <div class="authorAndDate">
-                        <span>${post.author}</span>
-                        <span>${post.date}</span>
-                     </div>
-                  `;
-                  postsContainer.appendChild(postElement);
-               });
-            });
       });
+
+      function showPostDetails(postId) {
+         const posts = [
+            {
+               id: 1,
+               title: "Bitcoin ve Geleceği",
+               imageUrl: "../public/img/background/content-1.jpg",
+               content: "Bitcoin, son on yılın en popüler dijital para birimlerinden biri haline geldi. Merkeziyetsiz yapısı ve sınırlı arzı sayesinde değer kazanmıştır. Ancak, volatilitesi yatırımcıları düşündürmektedir.",
+               author: "Alp Kara",
+               date: "04.01.2024"
+            },
+            {
+               id: 2,
+               title: "Ethereum: Akıllı Sözleşmelerin Gücü",
+               imageUrl: "../public/img/background/content-2.jpg",
+               content: "Ethereum, blockchain teknolojisi üzerine inşa edilen ve akıllı sözleşmeleri destekleyen bir platformdur. Geliştiricilere merkeziyetsiz uygulamalar oluşturma imkanı tanır.",
+               author: "Alp Kara",
+               date: "04.01.2024"
+            },
+            {
+               id: 3,
+               title: "Altcoinler ve Yatırım Fırsatları",
+               imageUrl: "../public/img/background/content-3.jpg",
+               content: "Bitcoin'in başarısının ardından, birçok alternatif kripto para birimi ortaya çıkmıştır. Bu altcoinler, farklı özellikleri ve kullanım alanları ile yatırımcılara çeşitli fırsatlar sunar.",
+               author: "Alp Kara",
+               date: "04.01.2024"
+            },
+            {
+               id: 4,
+               title: "Blockchain Teknolojisinin Geleceği",
+               imageUrl: "../public/img/background/content-4.jpg",
+               content: "Blockchain, sadece kripto para birimlerinin değil, aynı zamanda çeşitli sektörlerin de geleceğini şekillendiren devrim niteliğinde bir teknolojidir. Sağlık, finans ve daha birçok alanda kullanılma potansiyeline sahiptir.",
+               author: "Alp Kara",
+               date: "04.01.2024"
+            }
+         ];
+
+         const selectedPost = posts.find(post => post.id === postId);
+
+         if (selectedPost) {
+            localStorage.setItem('selectedPost', JSON.stringify(selectedPost));
+            window.location.href = 'pages/detail.html';
+         } else {
+            alert('Seçilen içerik bulunamadı.');
+         }
+      }
    </script>
 </body>
-
 </html>
